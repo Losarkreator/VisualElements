@@ -6,7 +6,7 @@ import SwiftUI
 // This that: http://itsthisforthat.com/api.php?json
 // https://pokeapi.co/api/v2/pokemon/
 
-typealias completionHandler = (_ response: [Datos]?, _ error: Error?) -> Void
+typealias completionHandler = (_ response: Datos?, _ error: Error?) -> Void
 
 class Network {
     
@@ -24,12 +24,14 @@ class Network {
         
         let dataTask = session.dataTask(with: urlRequest) { (data, response, error) in
             
-            guard error != nil else {
+            if let error = error {
                 completion(nil,error)
                 return
             }
             
             guard let response = response as? HTTPURLResponse else { return }
+            
+            print("status code: \(response.statusCode)")
             
             if response.statusCode != 200 { return }
             
@@ -38,7 +40,7 @@ class Network {
             
             DispatchQueue.main.async { [self] in
                 do {
-                    let decodedUsers = try decoder.decode([Datos].self, from: data)
+                    let decodedUsers = try decoder.decode(Datos.self, from: data)
                     completion(decodedUsers, nil)
                 } catch let error {
                     print("Error decoding: ", error)

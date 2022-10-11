@@ -15,11 +15,11 @@ struct Llamada: View {
     var body: some View {
         VStack {
             
-            ForEach(viewModel.thisThat.indices) { index in
-                let currentModel = viewModel.thisThat[index]
-                Text(currentModel.that)
+//            ForEach(viewModel.thisThat.indices) { index in
+//                let currentModel = viewModel.thisThat[index]
+            Text(viewModel.thisThat.that)
                 
-            }
+//            }
 //            Text(network.datos[0].this)
             
         }

@@ -35,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		227F5F7828F5AEFA006F8B40 /* llamadaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = llamadaViewModel.swift; sourceTree = "<group>"; };
+		227F5F7A28F5B637006F8B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		521D0CE428CE5CEA00E78087 /* BankinterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankinterPage.swift; sourceTree = "<group>"; };
 		5234911A28D064F5008A619D /* DragButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragButton.swift; sourceTree = "<group>"; };
 		5234911C28D0747B008A619D /* DragGestureDemoYT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureDemoYT.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		5279F12628CB2555007DB90E /* VisualElements */ = {
 			isa = PBXGroup;
 			children = (
+				227F5F7A28F5B637006F8B40 /* Info.plist */,
 				529F950428CF337F002F51AD /* Fonts */,
 				5279F12728CB2555007DB90E /* VisualElementsApp.swift */,
 				5279F12928CB2555007DB90E /* ContentView.swift */,
@@ -384,6 +386,7 @@
 				DEVELOPMENT_TEAM = CFCRC9XRT4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VisualElements/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -413,6 +416,7 @@
 				DEVELOPMENT_TEAM = CFCRC9XRT4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VisualElements/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
