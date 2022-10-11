@@ -9,6 +9,6 @@ import Foundation
 
 
 class Datos: Decodable, ObservableObject {
-    var this: String = ""
-    var that: String = ""
+     var this: String = ""
+     var that: String = ""
 }

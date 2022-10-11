@@ -10,22 +10,26 @@ import SwiftUI
 
 
 struct Llamada: View {
-    @ObservedObject var network: Network = Network()
-    
-    
+        
+    @ObservedObject var viewModel = llamadaViewModel()
     var body: some View {
         VStack {
-            Text("HI")
+            
+            ForEach(viewModel.thisThat.indices) { index in
+                let currentModel = viewModel.thisThat[index]
+                Text(currentModel.that)
+                
+            }
 //            Text(network.datos[0].this)
             
         }
-        .onAppear(perform: network.getDatos)
+        .onAppear(perform: viewModel.getData)
             
     }
 }
 
 struct Llamada_Previews: PreviewProvider {
     static var previews: some View {
-        Llamada(network: Network())
+        Llamada(viewModel: llamadaViewModel())
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227F5F7928F5AEFA006F8B40 /* llamadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F5F7828F5AEFA006F8B40 /* llamadaViewModel.swift */; };
 		521D0CE528CE5CEA00E78087 /* BankinterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D0CE428CE5CEA00E78087 /* BankinterPage.swift */; };
 		5234911B28D064F5008A619D /* DragButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234911A28D064F5008A619D /* DragButton.swift */; };
 		5234911D28D0747B008A619D /* DragGestureDemoYT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5234911C28D0747B008A619D /* DragGestureDemoYT.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		227F5F7828F5AEFA006F8B40 /* llamadaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = llamadaViewModel.swift; sourceTree = "<group>"; };
 		521D0CE428CE5CEA00E78087 /* BankinterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankinterPage.swift; sourceTree = "<group>"; };
 		5234911A28D064F5008A619D /* DragButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragButton.swift; sourceTree = "<group>"; };
 		5234911C28D0747B008A619D /* DragGestureDemoYT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureDemoYT.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				52BDEA7828F57C2300C00281 /* Llamada.swift */,
 				52BDEA7A28F57CA200C00281 /* Network.swift */,
 				52BDEA7C28F57CB800C00281 /* ModeloDeDatos.swift */,
+				227F5F7828F5AEFA006F8B40 /* llamadaViewModel.swift */,
 			);
 			path = Llamada;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				52BAF5CB28CB849C00F957E7 /* GaleriaImagenes.swift in Sources */,
 				5245BCD428CF13FA0083D7DB /* Colores.swift in Sources */,
 				5279F13D28CB4378007DB90E /* Lista.swift in Sources */,
+				227F5F7928F5AEFA006F8B40 /* llamadaViewModel.swift in Sources */,
 				52BDEA7928F57C2300C00281 /* Llamada.swift in Sources */,
 				5279F13F28CB4617007DB90E /* SimpleButton.swift in Sources */,
 				52BDEA7B28F57CA200C00281 /* Network.swift in Sources */,
