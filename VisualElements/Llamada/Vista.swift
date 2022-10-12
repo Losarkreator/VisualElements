@@ -16,19 +16,22 @@ struct Vista: View {
             Imagen(imageName: "cuervos")
             
             //TODO: Poner nombre del Pokemon
-            Text("Pokemon \(viewModel.thisThat.that)")
+//            Text("Pokemon \(viewModel.pokemon[0].name)")
+            Text("\(viewModel.thisThat.that)")
                 .multilineTextAlignment(.center)
             
             Spacer()
             
             Button("Obtener Nombre") {
-                viewModel.getData()
+//                viewModel.getData()
+                viewModel.getPokemonName()
             }
             .buttonStyle(CambiarColorAlPulsar())
             
         }
         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-        .onAppear(perform: viewModel.getData)
+        .onAppear(perform: viewModel.getPokemonName)
+//        .onAppear(perform: viewModel.getData)
             
     }
 }

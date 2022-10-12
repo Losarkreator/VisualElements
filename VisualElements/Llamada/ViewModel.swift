@@ -6,7 +6,7 @@ import Foundation
 
 class ViewModel: ObservableObject {
     @Published var thisThat: Datos = Datos()
-    @Published var pokemon: [PokemonResponse] = []
+    @Published var pokemon: [Pokemon] = [Pokemon()]
     let network: Network = Network()
     
     //    var test = ""
@@ -19,11 +19,11 @@ class ViewModel: ObservableObject {
     
     func getPokemonName(){
         network.getPokemon { [self] data, error in
-//            guard let response = data else {
-//                print(error?.localizedDescription)
-//                return
-//            }
-//            pokemon[0] = response
+            guard let response = data else {
+                print(error?.localizedDescription)
+                return
+            }
+            pokemon = response
         }
     }
     

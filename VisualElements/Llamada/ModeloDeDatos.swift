@@ -17,7 +17,7 @@ class PokemonResponse: Decodable, ObservableObject {
     var results: [Pokemon]
 }
 
-struct Pokemon: Decodable {
-    var name: String
-    var url: String
+class Pokemon: Decodable, ObservableObject {
+    var name: String = ""
+    var url: String = ""
 }
