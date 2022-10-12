@@ -47,9 +47,9 @@ struct Lista: View {
                     }
                     
                     NavigationLink{
-                        Llamada()
+                        Vista()
                     } label: {
-                        Text("Lista")
+                        Text("Llamada")
                     }
                     
                 }

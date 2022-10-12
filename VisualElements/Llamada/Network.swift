@@ -2,14 +2,15 @@
 //  VisualElements
 //  Created by cturrion on 11/10/22.
 
-import SwiftUI
 // This that: http://itsthisforthat.com/api.php?json
 // https://pokeapi.co/api/v2/pokemon/
+
+
+import SwiftUI
 
 // typealias indica datos dupla
 // -> devuelve en forma de funcion para cumplir con @escaping
 typealias completionHandler = (_ response: Datos?, _ error: Error?) -> Void
-
 typealias pokemonCompletitionHandler = (_ response: [Pokemon]?, _ error: Error?) -> Void
 
 class Network {
@@ -50,7 +51,6 @@ class Network {
             }
         }
         dataTask.resume()
-        
     }
     
     func getDatos(completion: @escaping completionHandler) {
@@ -61,22 +61,22 @@ class Network {
         
         //Solicitar URL
         let urlRequest = URLRequest(url: url)
+        // Crear tarea para recoger los datos de la url
         let dataTask = session.dataTask(with: urlRequest) { (data, response, error) in
             if let error = error {
+                // Respuesta nula / error
                 completion(nil,error)
                 return
             }
             
             //Para ver el status code
             guard let response = response as? HTTPURLResponse else { return }
-            
             print("status code: \(response.statusCode)")
-            
             if response.statusCode != 200 { return }
             
             guard let data = data else { return }
             
-            
+            // Añadir a la cola principal de forma asincrona
             DispatchQueue.main.async { [self] in
                 do {
                     let decodedUsers = try decoder.decode(Datos.self, from: data)
@@ -87,7 +87,7 @@ class Network {
             }
             
         }
-        dataTask.resume()
+        dataTask.resume() //Reanuda la tarea, si está suspendida. Si no no funciona
         
     }
     
