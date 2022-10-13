@@ -25,7 +25,7 @@ class Pokemon: Decodable, ObservableObject {
 
 // 2ª llamada
 struct PokemonURL: Decodable {
-    var sprite: FrontalSpriteURL
+    var sprites: FrontalSpriteURL
 }
 
 // -> URL de la IMAGEN frontal

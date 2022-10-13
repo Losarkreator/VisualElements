@@ -7,6 +7,7 @@ import Foundation
 class ViewModel: ObservableObject {
     @Published var thisThat: Datos = Datos()
     @Published var pokemon: [Pokemon] = [Pokemon()]
+    @Published var pokemonImage: FrontalSpriteURL = FrontalSpriteURL()
     let network: Network = Network()
     var randomNumber = 0
     
@@ -26,18 +27,18 @@ class ViewModel: ObservableObject {
     }
     
     func getPokemonSprite(){
-        network.getPokemon { [self] data, error in
+        network.getPokemonImage { [self] data, error in
             guard let response = data else {
                 print(error?.localizedDescription as Any)
                 return
             }
-            pokemon = response
+            pokemonImage = response
         }
     }
     
     func generateRandomNumber(){
         randomNumber = Int.random(in: 1...19)
-        print("Random Number = \(randomNumber)")
+//        print("Random Number = \(randomNumber)")
     }
     
     func getData() {

@@ -106,8 +106,34 @@ struct GaleriaImagenes: View {
                 .shadow(color: shadowColor, radius: 5, y: 5)
             }
             .padding(.top)
-        }
+            
+            
+            VStack(alignment: .leading) {
+                Text("Imagenes Async")
+                    .font(.headline)
+                    .padding(.leading)
+                
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack (spacing: 0) {
+                        // 10 Elementos máximo
+//                        Imagen(imageName: "AvatarIk")
+                        
+                        AsyncImageView(urlSprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
+                        AsyncImageView(urlSprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png")
+                        AsyncImageView(urlSprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png")
+                        AsyncImageView(urlSprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png")
+                        AsyncImageView(urlSprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png")
+                        AsyncImageView(urlSprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png")
+                        AsyncImageView(urlSprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png")
+                        AsyncImageView(urlSprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png")
+                        AsyncImageView(urlSprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png")
+                    }
+                }
+                .shadow(color: shadowColor, radius: 5, y: 5)
+            }
+            .padding(.top)
         
+        }
         
     }
 }

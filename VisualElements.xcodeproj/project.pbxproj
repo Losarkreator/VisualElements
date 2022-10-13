@@ -30,6 +30,7 @@
 		52BDEA7928F57C2300C00281 /* Vista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BDEA7828F57C2300C00281 /* Vista.swift */; };
 		52BDEA7B28F57CA200C00281 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BDEA7A28F57CA200C00281 /* Network.swift */; };
 		52BDEA7D28F57CB800C00281 /* ModeloDeDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BDEA7C28F57CB800C00281 /* ModeloDeDatos.swift */; };
+		52C7AAB428F817470050A4DD /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7AAB328F817470050A4DD /* AsyncImageView.swift */; };
 		52F4D1E328F3F61D004D84ED /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4D1E228F3F61D004D84ED /* SafariWebView.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		52BDEA7828F57C2300C00281 /* Vista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vista.swift; sourceTree = "<group>"; };
 		52BDEA7A28F57CA200C00281 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		52BDEA7C28F57CB800C00281 /* ModeloDeDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloDeDatos.swift; sourceTree = "<group>"; };
+		52C7AAB328F817470050A4DD /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		52F4D1E228F3F61D004D84ED /* SafariWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				52BDEA7C28F57CB800C00281 /* ModeloDeDatos.swift */,
 				227F5F7828F5AEFA006F8B40 /* ViewModel.swift */,
 				52BDEA7828F57C2300C00281 /* Vista.swift */,
+				52C7AAB328F817470050A4DD /* AsyncImageView.swift */,
 			);
 			path = Llamada;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				52BDEA7D28F57CB800C00281 /* ModeloDeDatos.swift in Sources */,
 				5279F14228CB4813007DB90E /* ButtonStyles.swift in Sources */,
 				5279F12A28CB2555007DB90E /* ContentView.swift in Sources */,
+				52C7AAB428F817470050A4DD /* AsyncImageView.swift in Sources */,
 				52A0228E28CC90B600BC9B22 /* Test.swift in Sources */,
 				5279F14428CB5029007DB90E /* Textos.swift in Sources */,
 				5279F12828CB2555007DB90E /* VisualElementsApp.swift in Sources */,

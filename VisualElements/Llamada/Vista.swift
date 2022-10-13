@@ -12,18 +12,24 @@ struct Vista: View {
         VStack(alignment: .center) {
             Spacer()
             
-            //TODO: Poner imagen del Pokemon
-            Imagen(imageName: "cuervos")
+            //TODO: Poner la misma imagen del Pokemon que se muestra
+            AsyncImageView(urlSprite: viewModel.pokemonImage.front_default)
+            
+            Text("pokemon Image URL: ")
+            Text(viewModel.pokemonImage.front_default)
+            
             
             Text(viewModel.pokemon[viewModel.randomNumber].name)
-//            Text(viewModel.pokemon[viewModel.randomNumber].url)
             Text(viewModel.pokemon[0].url)
+//            Text(viewModel.pokemon[viewModel.randomNumber].url)
             // Text("\(viewModel.thisThat.that)")
             
             Spacer()
             
             Button("Obtener Nombre") {
                 viewModel.getPokemonName()
+                viewModel.getPokemonSprite()
+                print(viewModel.pokemonImage.front_default)
                 // viewModel.getData()
             }
             .buttonStyle(CambiarColorAlPulsar())

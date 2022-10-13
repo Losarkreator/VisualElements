@@ -59,6 +59,7 @@ class Network {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/1/") else {
             fatalError("URL Error")
         }
+        
         let urlRequest = URLRequest(url: url)
         let dataTask = session.dataTask(with: urlRequest) { data, response, error in
             if let error = error {
@@ -73,7 +74,7 @@ class Network {
             DispatchQueue.main.async { [self] in
                 do {
                     let decodedPokemonURL = try decoder.decode(PokemonURL.self, from: data)
-                    let pokemonImageURL = decodedPokemonURL.sprite
+                    let pokemonImageURL = decodedPokemonURL.sprites
                     completion(pokemonImageURL, nil)
                 } catch let error {
                     print("Error decoding: ", error)
