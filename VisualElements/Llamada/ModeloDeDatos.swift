@@ -13,7 +13,7 @@ class Datos: Decodable, ObservableObject {
 class PokemonResponse: Decodable, ObservableObject {
     var count: Int
     var next: String
-    var previous: String
+    var previous: String?
     var results: [Pokemon]
 }
 

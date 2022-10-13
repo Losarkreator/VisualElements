@@ -10,17 +10,12 @@ class ViewModel: ObservableObject {
     let network: Network = Network()
     
     //    var test = ""
-    //
-    //    func getPalabraTest(){
-    //        network.getWord { text in
-    //            self.test = text
-    //        }
-    //    }
+    //    func getPalabraTest(){ network.getWord {text in self.test = text} }
     
     func getPokemonName(){
         network.getPokemon { [self] data, error in
             guard let response = data else {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription as Any)
                 return
             }
             pokemon = response
@@ -38,6 +33,5 @@ class ViewModel: ObservableObject {
             print("complete")
         }
     }
-    
     
 }
