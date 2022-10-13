@@ -10,7 +10,7 @@ class ViewModel: ObservableObject {
     @Published var pokemonImage: FrontalSpriteURL = FrontalSpriteURL()
     let network: Network = Network()
     var randomNumber = 0
-    
+    var selectedPokemon = Pokemon()
     //    var test = ""
     //    func getPalabraTest(){ network.getWord {text in self.test = text} }
     
@@ -23,12 +23,14 @@ class ViewModel: ObservableObject {
                 return
             }
             pokemon = response
+            selectedPokemon = pokemon[randomNumber]
+            getPokemonSprite()
         }
     }
     
     func getPokemonSprite(){
 //        viewModel.pokemon[viewModel.randomNumber].url
-        network.getPokemonImage(url: pokemon) { [self] data, error in
+        network.getPokemonImage(url: selectedPokemon.url) { [self] data, error in
             guard let response = data else {
                 print(error?.localizedDescription as Any)
                 return

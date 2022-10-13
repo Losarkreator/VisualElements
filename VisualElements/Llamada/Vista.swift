@@ -33,7 +33,7 @@ struct Vista: View {
             
             Button("Obtener Nombre") {
                 viewModel.getPokemonName()
-                viewModel.getPokemonSprite()
+//                viewModel.getPokemonSprite()
                 print(viewModel.pokemonImage.front_default)
                 // viewModel.getData()
             }
@@ -41,8 +41,15 @@ struct Vista: View {
             
         }
         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-        .onAppear(perform: viewModel.getPokemonName)
+        .onAppear{
+            getPokemon()
+        }
         
+    }
+    
+    private func getPokemon() {
+            viewModel.getPokemonName()
+//            viewModel.getPokemonSprite()
     }
 }
 
