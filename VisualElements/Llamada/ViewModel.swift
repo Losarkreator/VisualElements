@@ -14,6 +14,8 @@ class ViewModel: ObservableObject {
     //    func getPalabraTest(){ network.getWord {text in self.test = text} }
     
     func getPokemonName(){
+        generateRandomNumber()
+        
         network.getPokemon { [self] data, error in
             guard let response = data else {
                 print(error?.localizedDescription as Any)

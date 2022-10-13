@@ -21,7 +21,6 @@ struct Vista: View {
             Spacer()
             
             Button("Obtener Nombre") {
-                viewModel.generateRandomNumber()
                 viewModel.getPokemonName()
                 // viewModel.getData()
             }
