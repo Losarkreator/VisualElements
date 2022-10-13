@@ -9,7 +9,7 @@ class Datos: Decodable, ObservableObject {
     var that: String = ""
 }
 
-
+// 1ª llamada -> Array de Pokemon
 class PokemonResponse: Decodable, ObservableObject {
     var count: Int
     var next: String
@@ -17,7 +17,18 @@ class PokemonResponse: Decodable, ObservableObject {
     var results: [Pokemon]
 }
 
+// -> Nombre y URL para la 2ª llamada
 class Pokemon: Decodable, ObservableObject {
     var name: String = ""
     var url: String = ""
+}
+
+// 2ª llamada
+struct PokemonURL: Decodable {
+    var sprite: FrontalSpriteURL
+}
+
+// -> URL de la IMAGEN frontal
+struct FrontalSpriteURL: Decodable {
+    var front_default: String = ""
 }

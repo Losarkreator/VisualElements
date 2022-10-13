@@ -12,6 +12,7 @@ import SwiftUI
 // -> devuelve en forma de funcion para cumplir con @escaping
 typealias completionHandler = (_ response: Datos?, _ error: Error?) -> Void
 typealias pokemonCompletitionHandler = (_ response: [Pokemon]?, _ error: Error?) -> Void
+typealias pokemonImageCompletitionHandler = (_ response: FrontalSpriteURL?, _ error: Error?) -> Void
 
 class Network {
     
@@ -45,6 +46,35 @@ class Network {
                     let decodedPokemon = try decoder.decode(PokemonResponse.self, from: data)
                     let pokemon = decodedPokemon.results
                     completion(pokemon, nil)
+                } catch let error {
+                    print("Error decoding: ", error)
+                }
+            }
+        }
+        dataTask.resume()
+    }
+    
+    func getPokemonImage (completion: @escaping pokemonImageCompletitionHandler){
+        //TODO: Cambiar url por la obtenida en viewModel.pokemon[viewModel.randomNumber].url
+        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/1/") else {
+            fatalError("URL Error")
+        }
+        let urlRequest = URLRequest(url: url)
+        let dataTask = session.dataTask(with: urlRequest) { data, response, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            guard let response = response as? HTTPURLResponse else {return}
+            if response.statusCode != 200 { return }
+            
+            guard let data = data else {return}
+            
+            DispatchQueue.main.async { [self] in
+                do {
+                    let decodedPokemonURL = try decoder.decode(PokemonURL.self, from: data)
+                    let pokemonImageURL = decodedPokemonURL.sprite
+                    completion(pokemonImageURL, nil)
                 } catch let error {
                     print("Error decoding: ", error)
                 }

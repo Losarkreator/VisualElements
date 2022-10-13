@@ -25,6 +25,16 @@ class ViewModel: ObservableObject {
         }
     }
     
+    func getPokemonSprite(){
+        network.getPokemon { [self] data, error in
+            guard let response = data else {
+                print(error?.localizedDescription as Any)
+                return
+            }
+            pokemon = response
+        }
+    }
+    
     func generateRandomNumber(){
         randomNumber = Int.random(in: 1...19)
         print("Random Number = \(randomNumber)")

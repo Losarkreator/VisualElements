@@ -16,6 +16,8 @@ struct Vista: View {
             Imagen(imageName: "cuervos")
             
             Text(viewModel.pokemon[viewModel.randomNumber].name)
+//            Text(viewModel.pokemon[viewModel.randomNumber].url)
+            Text(viewModel.pokemon[0].url)
             // Text("\(viewModel.thisThat.that)")
             
             Spacer()
