@@ -15,14 +15,19 @@ struct Vista: View {
             //TODO: Poner la misma imagen del Pokemon que se muestra
             AsyncImageView(urlSprite: viewModel.pokemonImage.front_default)
             
-            Text("pokemon Image URL: ")
-            Text(viewModel.pokemonImage.front_default)
+            HStack {
+                Text("pokemon Image URL: \n \(viewModel.pokemonImage.front_default)")
+                Spacer()
+            }
+            .padding()
             
+            Divider()
+                .padding()
             
-            Text(viewModel.pokemon[viewModel.randomNumber].name)
-            Text(viewModel.pokemon[0].url)
-//            Text(viewModel.pokemon[viewModel.randomNumber].url)
-            // Text("\(viewModel.thisThat.that)")
+            Text(viewModel.pokemon[viewModel.randomNumber].name.capitalized)
+            //Text(viewModel.pokemon[0].url)
+            //Text(viewModel.pokemon[viewModel.randomNumber].url)
+            //Text("\(viewModel.thisThat.that)")
             
             Spacer()
             
@@ -37,7 +42,7 @@ struct Vista: View {
         }
         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         .onAppear(perform: viewModel.getPokemonName)
-            
+        
     }
 }
 

@@ -5,7 +5,7 @@
 import Foundation
 
 class ViewModel: ObservableObject {
-    @Published var thisThat: Datos = Datos()
+//    @Published var thisThat: Datos = Datos()
     @Published var pokemon: [Pokemon] = [Pokemon()]
     @Published var pokemonImage: FrontalSpriteURL = FrontalSpriteURL()
     let network: Network = Network()
@@ -27,7 +27,8 @@ class ViewModel: ObservableObject {
     }
     
     func getPokemonSprite(){
-        network.getPokemonImage { [self] data, error in
+//        viewModel.pokemon[viewModel.randomNumber].url
+        network.getPokemonImage(url: pokemon) { [self] data, error in
             guard let response = data else {
                 print(error?.localizedDescription as Any)
                 return
@@ -41,16 +42,16 @@ class ViewModel: ObservableObject {
 //        print("Random Number = \(randomNumber)")
     }
     
-    func getData() {
-        network.getDatos { [self] data, error in
-            guard let response = data else {
-                print(error!.localizedDescription)
-                return
-            }
-            
-            thisThat = response
-            print("complete")
-        }
-    }
+//    func getData() {
+//        network.getDatos { [self] data, error in
+//            guard let response = data else {
+//                print(error!.localizedDescription)
+//                return
+//            }
+//
+//            thisThat = response
+//            print("complete")
+//        }
+//    }
     
 }

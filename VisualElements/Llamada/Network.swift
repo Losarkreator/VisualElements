@@ -15,7 +15,6 @@ typealias pokemonCompletitionHandler = (_ response: [Pokemon]?, _ error: Error?)
 typealias pokemonImageCompletitionHandler = (_ response: FrontalSpriteURL?, _ error: Error?) -> Void
 
 class Network {
-    
     let decoder = JSONDecoder()
     let session = URLSession.shared
     
@@ -54,9 +53,9 @@ class Network {
         dataTask.resume()
     }
     
-    func getPokemonImage (completion: @escaping pokemonImageCompletitionHandler){
+    func getPokemonImage (url: String, completion: @escaping pokemonImageCompletitionHandler){
         //TODO: Cambiar url por la obtenida en viewModel.pokemon[viewModel.randomNumber].url
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/1/") else {
+        guard let url = URL(string: url) else {
             fatalError("URL Error")
         }
         
