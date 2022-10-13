@@ -8,6 +8,7 @@ class ViewModel: ObservableObject {
     @Published var thisThat: Datos = Datos()
     @Published var pokemon: [Pokemon] = [Pokemon()]
     let network: Network = Network()
+    var randomNumber = 0
     
     //    var test = ""
     //    func getPalabraTest(){ network.getWord {text in self.test = text} }
@@ -20,6 +21,11 @@ class ViewModel: ObservableObject {
             }
             pokemon = response
         }
+    }
+    
+    func generateRandomNumber(){
+        randomNumber = Int.random(in: 1...19)
+        print("Random Number = \(randomNumber)")
     }
     
     func getData() {
