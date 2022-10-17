@@ -20,10 +20,10 @@ let listButtons:[ListButton] = [
     ListButton(nextScreen: AnyView(Colores()), text: Text("Colores")),
     ListButton(nextScreen: AnyView(GradientColor()), text: Text("Gradiente")),
     ListButton(nextScreen: AnyView(DragButton()), text: Text("DragButton")),
-    ListButton(nextScreen: AnyView(SafariWebView(url: url)), text: Text("SafariWebView")),
+    ListButton(nextScreen: AnyView(Alerts()), text: Text("Alerts")),
+    ListButton(nextScreen: AnyView(SafariWebView(url: url)), text: Text("SafariWebView"))
 //    ListButton(nextScreen: AnyView(Llamada()), text: Text("Llamada")),
     
-    ListButton(nextScreen: AnyView(Alerts()), text: Text("Alerts"))
 ]
 
 struct Lista: View {
@@ -54,6 +54,7 @@ struct Lista: View {
                     
                 }
             }
+            
         }
             
     }
