@@ -18,7 +18,7 @@ struct Vista: View {
             
             Button("Obtener Pokemon") {
                 viewModel.getPokemonName()
-                print(viewModel.pokemonImage.front_default)
+//                print(viewModel.pokemonImage.front_default)
             }
             .buttonStyle(CambiarColorAlPulsar())
             

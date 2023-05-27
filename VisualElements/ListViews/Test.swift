@@ -23,7 +23,7 @@ struct Test: View {
             }
             if show {
                 Rectangle()
-                    .foregroundColor(.blue)
+                    .foregroundColor(.black)
                     .frame(height: 100)
                     .transition(.move(edge: .trailing))
                     .transaction {
@@ -32,7 +32,7 @@ struct Test: View {
                     .onAppear { self.delay1 = 0.5 }
                     .onDisappear { self.delay1 = 0.3 }
                 Rectangle()
-                    .foregroundColor(.yellow)
+                    .foregroundColor(.red)
                     .frame(height: 100)
                     .transition(.move(edge: .trailing))
                     .transaction {
